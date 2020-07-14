@@ -1,12 +1,12 @@
 <h1><%= @members.count %> Members</h1>
 <% @members.each do |member| %>
   <ul class='member'>
-    <li class='name'><%= member[:name] %></li>
-    <% if member[:photoUrl] %>
-    <li class='photo'><%= image_tag(member[:photoUrl]) %></li>
+    <li class='name'><%= member.name %></li>
+    <% if member.photo_url %>
+    <li class='photo'><%= image_tag(member.photo_url) %></li>
     <% end %>
-    <li class='allies'><%= member[:allies] %></li>
-    <li class='enemies'><%= member[:enemies] %></li>
-    <li class='affiliation'><%= member[:affiliation] %></li>
+    <li class='allies'><%= member.allies %></li>
+    <li class='enemies'><%= member.enemies %></li>
+    <li class='affiliation'><%= member.affiliation %></li>
   </ul>
 <% end %>
